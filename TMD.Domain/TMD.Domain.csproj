@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87B024C0-44B0-45B2-A41B-C5B2B8ADFF21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMD.Domain</RootNamespace>
+    <AssemblyName>TMD.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\Repositories\IBaseRepository.cs" />
+    <Compile Include="Contracts\Repositories\ITMDContext.cs" />
+    <Compile Include="Contracts\Repositories\ITMDRepository.cs" />
+    <Compile Include="Contracts\Repositories\IValidate.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\BusinessType.cs" />
+    <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\RecruiterCandidateHistory.cs" />
+    <Compile Include="Models\RecruiterShortlist.cs" />
+    <Compile Include="Models\RecruiterCandidate.cs" />
+    <Compile Include="Models\Request.cs" />
+    <Compile Include="Models\SiteActivity.cs" />
+    <Compile Include="Models\SiteActivityType.cs" />
+    <Compile Include="Models\WorkflowStatus.cs" />
+    <Compile Include="Models\PersonEmployment.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\ContractType.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\PersonType.cs" />
+    <Compile Include="Models\RequestType.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\DayRate.cs" />
+    <Compile Include="Models\DigitalSpecialism.cs" />
+    <Compile Include="Models\Eligibility.cs" />
+    <Compile Include="Models\FreeTrialPeriod.cs" />
+    <Compile Include="Models\JobTitle.cs" />
+    <Compile Include="Models\JobType.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\MarketingSpecialism.cs" />
+    <Compile Include="Models\Package.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Recruiter.cs" />
+    <Compile Include="Models\RecruiterCandidateHistoryItem.cs" />
+    <Compile Include="Models\ReLocate.cs" />
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\DataStatus.cs" />
+    <Compile Include="Models\Salary.cs" />
+    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="Models\SubscriptionType.cs" />
+    <Compile Include="Models\SubscriptionTypeItem.cs" />
+    <Compile Include="Models\TechnologyCategory.cs" />
+    <Compile Include="Models\TMDRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

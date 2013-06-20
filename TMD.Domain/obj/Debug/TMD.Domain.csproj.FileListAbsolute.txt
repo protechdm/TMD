@@ -1,0 +1,7 @@
+J:\TMD\TMD.Domain\bin\Debug\TMD.Domain.dll
+J:\TMD\TMD.Domain\bin\Debug\TMD.Domain.pdb
+J:\TMD\TMD.Domain\bin\Debug\EntityFramework.dll
+J:\TMD\TMD.Domain\bin\Debug\EntityFramework.xml
+J:\TMD\TMD.Domain\obj\Debug\ResolveAssemblyReference.cache
+J:\TMD\TMD.Domain\obj\Debug\TMD.Domain.dll
+J:\TMD\TMD.Domain\obj\Debug\TMD.Domain.pdb

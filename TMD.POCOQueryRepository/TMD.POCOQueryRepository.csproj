@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DAFB275-0D01-4BD4-9B47-23E4530A6522}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMD.POCOQueryRepository</RootNamespace>
+    <AssemblyName>TMD.POCOQueryRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Core.3.1.0\lib\net40-client\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\packages\LinqKit\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="Caching\Caching.cs" />
+    <Compile Include="Configurations\AccountConfiguration.cs" />
+    <Compile Include="Configurations\AddressConfiguration.cs" />
+    <Compile Include="Configurations\BusinessTypeConfiguration.cs" />
+    <Compile Include="Configurations\CandidateConfiguration.cs" />
+    <Compile Include="Configurations\CompanyConfiguration.cs" />
+    <Compile Include="Configurations\ContractTypeConfiguration.cs" />
+    <Compile Include="Configurations\RecruiterCandidateHistoryItemConfiguration.cs" />
+    <Compile Include="Configurations\RequestConfiguration.cs" />
+    <Compile Include="Configurations\CountryConfiguration.cs" />
+    <Compile Include="Configurations\CurrencyConfiguration.cs" />
+    <Compile Include="Configurations\DataStatusConfiguration.cs" />
+    <Compile Include="Configurations\DayRateConfiguration.cs" />
+    <Compile Include="Configurations\DigitalSpecialismConfiguration.cs" />
+    <Compile Include="Configurations\EligibilityConfiguration.cs" />
+    <Compile Include="Configurations\FreeTrialPeriodConfiguration.cs" />
+    <Compile Include="Configurations\JobTitleConfiguration.cs" />
+    <Compile Include="Configurations\JobTypeConfiguration.cs" />
+    <Compile Include="Configurations\LanguageConfiguration.cs" />
+    <Compile Include="Configurations\LocationConfiguration.cs" />
+    <Compile Include="Configurations\MarketingSpecialismConfiguration.cs" />
+    <Compile Include="Configurations\PackageConfiguration.cs" />
+    <Compile Include="Configurations\PersonConfiguration.cs" />
+    <Compile Include="Configurations\PersonEmploymentConfiguration.cs" />
+    <Compile Include="Configurations\PersonTypeConfiguration.cs" />
+    <Compile Include="Configurations\RecruiterCandidateConfiguration.cs" />
+    <Compile Include="Configurations\RecruiterCandidateHistoryConfiguration.cs" />
+    <Compile Include="Configurations\RecruiterConfiguration.cs" />
+    <Compile Include="Configurations\RecruiterShortlistConfiguration.cs" />
+    <Compile Include="Configurations\ReLocateConfiguration.cs" />
+    <Compile Include="Configurations\RequestTypeConfiguration.cs" />
+    <Compile Include="Configurations\RoleConfiguration.cs" />
+    <Compile Include="Configurations\SalaryConfiguration.cs" />
+    <Compile Include="Configurations\SectorConfiguration.cs" />
+    <Compile Include="Configurations\SiteActivityConfiguration.cs" />
+    <Compile Include="Configurations\SiteActivityTypeConfiguration.cs" />
+    <Compile Include="Configurations\SubscriptionConfiguration.cs" />
+    <Compile Include="Configurations\SubscriptionTypeConfiguration.cs" />
+    <Compile Include="Configurations\SubscriptionTypeItemConfiguration.cs" />
+    <Compile Include="Configurations\TechnologyCategoryConfiguration.cs" />
+    <Compile Include="Configurations\TMDRequestConfiguration.cs" />
+    <Compile Include="Configurations\WorkflowStatusConfiguration.cs" />
+    <Compile Include="DataPump\FakeData.cs" />
+    <Compile Include="DataPump\ReferenceData.cs" />
+    <Compile Include="POCOQueryRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TMDContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TMD.Domain\TMD.Domain.csproj">
+      <Project>{87B024C0-44B0-45B2-A41B-C5B2B8ADFF21}</Project>
+      <Name>TMD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TMD.SocialNetworking\TMD.SocialNetworking.csproj">
+      <Project>{BAF3E90D-A93E-44ED-8610-049F53A673AA}</Project>
+      <Name>TMD.SocialNetworking</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataPump\ApplicationProductionData\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

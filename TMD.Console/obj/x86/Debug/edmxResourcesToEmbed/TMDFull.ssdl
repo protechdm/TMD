@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TMDModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TMDModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="TMDModel.Store.Accounts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Addresses" EntityType="TMDModel.Store.Addresses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessTypes" EntityType="TMDModel.Store.BusinessTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Candidates" EntityType="TMDModel.Store.Candidates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Companies" EntityType="TMDModel.Store.Companies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContractTypes" EntityType="TMDModel.Store.ContractTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Countries" EntityType="TMDModel.Store.Countries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Currencies" EntityType="TMDModel.Store.Currencies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DayRates" EntityType="TMDModel.Store.DayRates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DigitalSpecialisms" EntityType="TMDModel.Store.DigitalSpecialisms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Eligibilities" EntityType="TMDModel.Store.Eligibilities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FreeTrialPeriods" EntityType="TMDModel.Store.FreeTrialPeriods" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobTitles" EntityType="TMDModel.Store.JobTitles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobTypes" EntityType="TMDModel.Store.JobTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Languages" EntityType="TMDModel.Store.Languages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locations" EntityType="TMDModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MarketingSpecialisms" EntityType="TMDModel.Store.MarketingSpecialisms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Packages" EntityType="TMDModel.Store.Packages" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonEmployments" EntityType="TMDModel.Store.PersonEmployments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Persons" EntityType="TMDModel.Store.Persons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonTypes" EntityType="TMDModel.Store.PersonTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecruiterCandidateHistory" EntityType="TMDModel.Store.RecruiterCandidateHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecruiterCandidateHistoryItems" EntityType="TMDModel.Store.RecruiterCandidateHistoryItems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecruiterCandidates" EntityType="TMDModel.Store.RecruiterCandidates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Recruiters" EntityType="TMDModel.Store.Recruiters" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecruiterShortlists" EntityType="TMDModel.Store.RecruiterShortlists" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReLocates" EntityType="TMDModel.Store.ReLocates" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Requests" EntityType="TMDModel.Store.Requests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequestTypes" EntityType="TMDModel.Store.RequestTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="TMDModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Salaries" EntityType="TMDModel.Store.Salaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sectors" EntityType="TMDModel.Store.Sectors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteActivities" EntityType="TMDModel.Store.SiteActivities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SiteActivityTypes" EntityType="TMDModel.Store.SiteActivityTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subscriptions" EntityType="TMDModel.Store.Subscriptions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubscriptionTypeItems" EntityType="TMDModel.Store.SubscriptionTypeItems" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubscriptionTypes" EntityType="TMDModel.Store.SubscriptionTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TechnologyCategories" EntityType="TMDModel.Store.TechnologyCategories" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Account_AccountCompany" Association="TMDModel.Store.Account_AccountCompany">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="Account_AccountPackage" Association="TMDModel.Store.Account_AccountPackage">
+      <End Role="Packages" EntitySet="Packages" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="Account_AccountRecruiters" Association="TMDModel.Store.Account_AccountRecruiters">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Recruiters" EntitySet="Recruiters" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_BusinessTypeExperiences" Association="TMDModel.Store.Candidate_BusinessTypeExperiences">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="BusinessTypes" EntitySet="BusinessTypes" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_ContractTypes" Association="TMDModel.Store.Candidate_ContractTypes">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="ContractTypes" EntitySet="ContractTypes" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_Countries" Association="TMDModel.Store.Candidate_Countries">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="Countries" EntitySet="Countries" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_CurrentDayRate" Association="TMDModel.Store.Candidate_CurrentDayRate">
+      <End Role="DayRates" EntitySet="DayRates" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_CurrentSalary" Association="TMDModel.Store.Candidate_CurrentSalary">
+      <End Role="Salaries" EntitySet="Salaries" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_DigitalSpecialisms" Association="TMDModel.Store.Candidate_DigitalSpecialisms">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="DigitalSpecialisms" EntitySet="DigitalSpecialisms" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_EligibilityToWorkIn" Association="TMDModel.Store.Candidate_EligibilityToWorkIn">
+      <End Role="Eligibilities" EntitySet="Eligibilities" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_Employments" Association="TMDModel.Store.Candidate_Employments">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="PersonEmployments" EntitySet="PersonEmployments" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_JobTypes" Association="TMDModel.Store.Candidate_JobTypes">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="JobTypes" EntitySet="JobTypes" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_Languages" Association="TMDModel.Store.Candidate_Languages">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="Languages" EntitySet="Languages" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_LocationsSought" Association="TMDModel.Store.Candidate_LocationsSought">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="Locations" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_MarketingSpecialisms" Association="TMDModel.Store.Candidate_MarketingSpecialisms">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="MarketingSpecialisms" EntitySet="MarketingSpecialisms" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_Person" Association="TMDModel.Store.Candidate_Person">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_SectorExperiences" Association="TMDModel.Store.Candidate_SectorExperiences">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="Sectors" EntitySet="Sectors" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_TechnologyCategoryExperiences" Association="TMDModel.Store.Candidate_TechnologyCategoryExperiences">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="TechnologyCategories" EntitySet="TechnologyCategories" />
+    </AssociationSet>
+    <AssociationSet Name="Candidate_WillingToRelocate" Association="TMDModel.Store.Candidate_WillingToRelocate">
+      <End Role="ReLocates" EntitySet="ReLocates" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="Company_CompanyAddress" Association="TMDModel.Store.Company_CompanyAddress">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Companies" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="DayRate_DayRateCurrency" Association="TMDModel.Store.DayRate_DayRateCurrency">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="DayRates" EntitySet="DayRates" />
+    </AssociationSet>
+    <AssociationSet Name="FreeTrialPeriod_FreeTrialPeriodRecruiter" Association="TMDModel.Store.FreeTrialPeriod_FreeTrialPeriodRecruiter">
+      <End Role="Recruiters" EntitySet="Recruiters" />
+      <End Role="FreeTrialPeriods" EntitySet="FreeTrialPeriods" />
+    </AssociationSet>
+    <AssociationSet Name="Person_PersonAddress" Association="TMDModel.Store.Person_PersonAddress">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="Person_PersonTypes" Association="TMDModel.Store.Person_PersonTypes">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="PersonTypes" EntitySet="PersonTypes" />
+    </AssociationSet>
+    <AssociationSet Name="Person_RoleTypes" Association="TMDModel.Store.Person_RoleTypes">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Roles" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="PersonEmployment_Company" Association="TMDModel.Store.PersonEmployment_Company">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="PersonEmployments" EntitySet="PersonEmployments" />
+    </AssociationSet>
+    <AssociationSet Name="PersonEmployment_JobTitle" Association="TMDModel.Store.PersonEmployment_JobTitle">
+      <End Role="JobTitles" EntitySet="JobTitles" />
+      <End Role="PersonEmployments" EntitySet="PersonEmployments" />
+    </AssociationSet>
+    <AssociationSet Name="Recruiter_Employments" Association="TMDModel.Store.Recruiter_Employments">
+      <End Role="Recruiters" EntitySet="Recruiters" />
+      <End Role="PersonEmployments" EntitySet="PersonEmployments" />
+    </AssociationSet>
+    <AssociationSet Name="Recruiter_Person" Association="TMDModel.Store.Recruiter_Person">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Recruiters" EntitySet="Recruiters" />
+    </AssociationSet>
+    <AssociationSet Name="Recruiter_Subscription" Association="TMDModel.Store.Recruiter_Subscription">
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+      <End Role="Recruiters" EntitySet="Recruiters" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterCandidate_RecruiterCandidateAssignedTo" Association="TMDModel.Store.RecruiterCandidate_RecruiterCandidateAssignedTo">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="RecruiterCandidates" EntitySet="RecruiterCandidates" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterCandidateHistory_RecruiterCandidateHistoryItems" Association="TMDModel.Store.RecruiterCandidateHistory_RecruiterCandidateHistoryItems">
+      <End Role="RecruiterCandidateHistory" EntitySet="RecruiterCandidateHistory" />
+      <End Role="RecruiterCandidateHistoryItems" EntitySet="RecruiterCandidateHistoryItems" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterCandidateHistoryItem_CandidateID" Association="TMDModel.Store.RecruiterCandidateHistoryItem_CandidateID">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="RecruiterCandidateHistoryItems" EntitySet="RecruiterCandidateHistoryItems" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterCandidateHistoryItem_RecruiterID" Association="TMDModel.Store.RecruiterCandidateHistoryItem_RecruiterID">
+      <End Role="Recruiters" EntitySet="Recruiters" />
+      <End Role="RecruiterCandidateHistoryItems" EntitySet="RecruiterCandidateHistoryItems" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterShortlist_Candidates" Association="TMDModel.Store.RecruiterShortlist_Candidates">
+      <End Role="RecruiterShortlists" EntitySet="RecruiterShortlists" />
+      <End Role="Candidates" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterShortlist_Recruiter" Association="TMDModel.Store.RecruiterShortlist_Recruiter">
+      <End Role="Recruiters" EntitySet="Recruiters" />
+      <End Role="RecruiterShortlists" EntitySet="RecruiterShortlists" />
+    </AssociationSet>
+    <AssociationSet Name="Request_RecruiterShortlist" Association="TMDModel.Store.Request_RecruiterShortlist">
+      <End Role="RecruiterShortlists" EntitySet="RecruiterShortlists" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="Request_RequestType" Association="TMDModel.Store.Request_RequestType">
+      <End Role="RequestTypes" EntitySet="RequestTypes" />
+      <End Role="Requests" EntitySet="Requests" />
+    </AssociationSet>
+    <AssociationSet Name="SiteActivity_Candidate" Association="TMDModel.Store.SiteActivity_Candidate">
+      <End Role="Candidates" EntitySet="Candidates" />
+      <End Role="SiteActivities" EntitySet="SiteActivities" />
+    </AssociationSet>
+    <AssociationSet Name="SiteActivity_Recruiter" Association="TMDModel.Store.SiteActivity_Recruiter">
+      <End Role="Recruiters" EntitySet="Recruiters" />
+      <End Role="SiteActivities" EntitySet="SiteActivities" />
+    </AssociationSet>
+    <AssociationSet Name="SiteActivity_SiteActivities" Association="TMDModel.Store.SiteActivity_SiteActivities">
+      <End Role="SiteActivities" EntitySet="SiteActivities" />
+      <End Role="SiteActivityTypes" EntitySet="SiteActivityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="SubscriptionType_SubscriptionTypeItems" Association="TMDModel.Store.SubscriptionType_SubscriptionTypeItems">
+      <End Role="SubscriptionTypes" EntitySet="SubscriptionTypes" />
+      <End Role="SubscriptionTypeItems" EntitySet="SubscriptionTypeItems" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AccountStartDate" Type="datetime" Nullable="false" />
+    <Property Name="AccountRenewalDate" Type="datetime" Nullable="false" />
+    <Property Name="AccountIntroductionsLimit" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="AccountCompany_CompanyID" Type="int" />
+    <Property Name="AccountPackage_PackageID" Type="int" />
+    <Property Name="AccountWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="AccountDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Address1" Type="nvarchar(max)" />
+    <Property Name="Address2" Type="nvarchar(max)" />
+    <Property Name="Region" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="PostCode" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="AddressWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="AddressDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="BusinessTypes">
+    <Key>
+      <PropertyRef Name="BusinessTypeID" />
+    </Key>
+    <Property Name="BusinessTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="BusinessTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="BusinessTypeDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Candidates">
+    <Key>
+      <PropertyRef Name="CandidateID" />
+    </Key>
+    <Property Name="CandidateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CandidateSummary" Type="nvarchar(max)" />
+    <Property Name="CandidateReference" Type="nvarchar(max)" />
+    <Property Name="CandidateScoring" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Person_PersonID" Type="int" />
+    <Property Name="CurrentDayRate_DayRateID" Type="int" />
+    <Property Name="CurrentSalary_SalaryID" Type="int" />
+    <Property Name="WillingToRelocate_ReLocateID" Type="int" />
+    <Property Name="EligibilityToWorkIn_EligibilityID" Type="int" />
+    <Property Name="CandidateWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="CandidateDataStatus_DataStatusID" Type="int" />
+    <Property Name="RecruiterShortlist_RecruiterShortlistID" Type="int" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyEMail" Type="nvarchar(max)" />
+    <Property Name="CompanyTelephone" Type="nvarchar(max)" />
+    <Property Name="LastLoggedIn" Type="datetime" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="CompanyAddress_AddressID" Type="int" />
+    <Property Name="CompanyWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="CompanyDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="ContractTypes">
+    <Key>
+      <PropertyRef Name="ContractTypeID" />
+    </Key>
+    <Property Name="ContractTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ContractTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ContractTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="ContractTypeDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="CountryWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="CountryDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Currencies">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CurrencyShortName" Type="nvarchar(max)" />
+    <Property Name="CurrencyName" Type="nvarchar(max)" />
+    <Property Name="CurrencySymbol" Type="nvarchar(max)" />
+    <Property Name="ExchangeRateSterling" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="CurrencyWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="CurrencyDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="DayRates">
+    <Key>
+      <PropertyRef Name="DayRateID" />
+    </Key>
+    <Property Name="DayRateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DayRateName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DayRateCurrency_CurrencyID" Type="int" />
+    <Property Name="DayRateWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="CurrencyDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="DigitalSpecialisms">
+    <Key>
+      <PropertyRef Name="DigitalSpecialismID" />
+    </Key>
+    <Property Name="DigitalSpecialismID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DigitalSpecialismName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DigitalSpecialismWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="DigitalSpecialismDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Eligibilities">
+    <Key>
+      <PropertyRef Name="EligibilityID" />
+    </Key>
+    <Property Name="EligibilityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EligibilityName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="EligibilityWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="EligibilityDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="FreeTrialPeriods">
+    <Key>
+      <PropertyRef Name="FreeTrialPeriodID" />
+    </Key>
+    <Property Name="FreeTrialPeriodID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FreeTrialPeriodName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="FreeTrialPeriodRecruiter_RecruiterID" Type="int" />
+    <Property Name="FreeTrialPeriodWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="FreeTrialPeriodDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="JobTitles">
+    <Key>
+      <PropertyRef Name="JobTitleID" />
+    </Key>
+    <Property Name="JobTitleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitleName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="JobTitleWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="JobTitleDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="JobTypes">
+    <Key>
+      <PropertyRef Name="JobTypeID" />
+    </Key>
+    <Property Name="JobTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="JobTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="JobTypeDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="LanguageID" />
+    </Key>
+    <Property Name="LanguageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LanguageName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LanguageWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="LanguageDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LocationName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LocationWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="LocationDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="MarketingSpecialisms">
+    <Key>
+      <PropertyRef Name="MarketingSpecialismID" />
+    </Key>
+    <Property Name="MarketingSpecialismID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MarketingSpecialismName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="MarketingSpecialismWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="MarketingSpecialismDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Packages">
+    <Key>
+      <PropertyRef Name="PackageID" />
+    </Key>
+    <Property Name="PackageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PackageName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PackageWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="PackageDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonEmployments">
+    <Key>
+      <PropertyRef Name="PersonEmploymentID" />
+    </Key>
+    <Property Name="PersonEmploymentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="int" Nullable="false" />
+    <Property Name="IsCurrent" Type="bit" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="Company_CompanyID" Type="int" />
+    <Property Name="JobTitle_JobTitleID" Type="int" />
+    <Property Name="PersonEmploymentWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="PersonEmploymentDataStatus_DataStatusID" Type="int" />
+    <Property Name="Recruiter_RecruiterID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Forename" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" />
+    <Property Name="EMail" Type="nvarchar" Nullable="false" MaxLength="105" />
+    <Property Name="Telephone" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="IsOnline" Type="bit" Nullable="false" />
+    <Property Name="LastLoggedIn" Type="datetime" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PersonAddress_AddressID" Type="int" />
+    <Property Name="PersonWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="PersonDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="PersonTypes">
+    <Key>
+      <PropertyRef Name="PersonTypeID" />
+    </Key>
+    <Property Name="PersonTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PersonTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="PersonTypeDataStatus_DataStatusID" Type="int" />
+    <Property Name="Person_PersonID" Type="int" />
+  </EntityType>
+  <EntityType Name="RecruiterCandidateHistory">
+    <Key>
+      <PropertyRef Name="RecruiterCandidateHistoryID" />
+    </Key>
+    <Property Name="RecruiterCandidateHistoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RecruiterCandidateHistoriesWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RecruiterCandidateHistoriesDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="RecruiterCandidateHistoryItems">
+    <Key>
+      <PropertyRef Name="RecruiterCandidateHistoryItemID" />
+    </Key>
+    <Property Name="RecruiterCandidateHistoryItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterCandidateHistoryItemDate" Type="datetime" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RecruiterID_RecruiterID" Type="int" />
+    <Property Name="CandidateID_CandidateID" Type="int" />
+    <Property Name="RecruiterCandidateHistoryItemWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RecruiterCandidateHistoryItemDataStatus_DataStatusID" Type="int" />
+    <Property Name="RecruiterCandidateHistory_RecruiterCandidateHistoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="RecruiterCandidates">
+    <Key>
+      <PropertyRef Name="RecruiterCandidateID" />
+    </Key>
+    <Property Name="RecruiterCandidateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterID" Type="int" Nullable="false" />
+    <Property Name="CandidateID" Type="int" Nullable="false" />
+    <Property Name="RecruiterCandidateDate" Type="datetime" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RecruiterCandidateWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RecruiterCandidateAssignedTo_PersonID" Type="int" />
+    <Property Name="RecruiterCandidateDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="Recruiters">
+    <Key>
+      <PropertyRef Name="RecruiterID" />
+    </Key>
+    <Property Name="RecruiterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Person_PersonID" Type="int" />
+    <Property Name="Subscription_SubscriptionID" Type="int" />
+    <Property Name="RecruiterWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RecruiterDataStatus_DataStatusID" Type="int" />
+    <Property Name="Account_AccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="RecruiterShortlists">
+    <Key>
+      <PropertyRef Name="RecruiterShortlistID" />
+    </Key>
+    <Property Name="RecruiterShortlistID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RecruiterShortlistName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Recruiter_RecruiterID" Type="int" />
+    <Property Name="RecruiterShortlistWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RecruiterShortlistDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="ReLocates">
+    <Key>
+      <PropertyRef Name="ReLocateID" />
+    </Key>
+    <Property Name="ReLocateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReLocateName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ReLocateWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="ReLocateDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RequestType_RequestTypeID" Type="int" />
+    <Property Name="RecruiterShortlist_RecruiterShortlistID" Type="int" />
+    <Property Name="RequestTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RequestTypeDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="RequestTypes">
+    <Key>
+      <PropertyRef Name="RequestTypeID" />
+    </Key>
+    <Property Name="RequestTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RequestTypeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RequestTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RequestTypeDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="RoleWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="RoleDataStatus_DataStatusID" Type="int" />
+    <Property Name="Person_PersonID" Type="int" />
+  </EntityType>
+  <EntityType Name="Salaries">
+    <Key>
+      <PropertyRef Name="SalaryID" />
+    </Key>
+    <Property Name="SalaryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalaryName" Type="nvarchar(max)" />
+    <Property Name="SalaryFrom" Type="int" Nullable="false" />
+    <Property Name="SalaryTo" Type="int" Nullable="false" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SalaryWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SalaryDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="Sectors">
+    <Key>
+      <PropertyRef Name="SectorID" />
+    </Key>
+    <Property Name="SectorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SectorName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SectorWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SectorDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <EntityType Name="SiteActivities">
+    <Key>
+      <PropertyRef Name="SiteActivityID" />
+    </Key>
+    <Property Name="SiteActivityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+    <Property Name="Recruiter_RecruiterID" Type="int" />
+    <Property Name="SiteActivityWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SiteActivityDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="SiteActivityTypes">
+    <Key>
+      <PropertyRef Name="SiteActivityTypeID" />
+    </Key>
+    <Property Name="SiteActivityTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SiteActivityTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SiteActivityTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SiteActivityTypeDataStatus_DataStatusID" Type="int" />
+    <Property Name="SiteActivity_SiteActivityID" Type="int" />
+  </EntityType>
+  <EntityType Name="Subscriptions">
+    <Key>
+      <PropertyRef Name="SubscriptionID" />
+    </Key>
+    <Property Name="SubscriptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubscriptionCostPerUserOffered" Type="bit" Nullable="false" />
+    <Property Name="SubscriptionCostPerMultiUserOffered" Type="bit" Nullable="false" />
+    <Property Name="SubscriptionCostPerUser" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SubscriptionCostPerMultiUser" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SubscriptionWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SubscriptionDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="SubscriptionTypeItems">
+    <Key>
+      <PropertyRef Name="SubscriptionTypeItemID" />
+    </Key>
+    <Property Name="SubscriptionTypeItemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubscriptionTypeItemName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SubscriptionTypeItemWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SubscriptionTypeItemDataStatus_DataStatusID" Type="int" />
+    <Property Name="SubscriptionType_SubscriptionTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="SubscriptionTypes">
+    <Key>
+      <PropertyRef Name="SubscriptionTypeID" />
+    </Key>
+    <Property Name="SubscriptionTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubscriptionTypeName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SubscriptionTypeWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="SubscriptionTypeDataStatus_DataStatusID" Type="int" />
+  </EntityType>
+  <EntityType Name="TechnologyCategories">
+    <Key>
+      <PropertyRef Name="TechnologyCategoryID" />
+    </Key>
+    <Property Name="TechnologyCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TechnologyCategoryName" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="RowVersion" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="TechnologyCategoryWorkflowStatus_WorkflowStatusID" Type="int" />
+    <Property Name="TechnologyCategoryDataStatus_DataStatusID" Type="int" />
+    <Property Name="Candidate_CandidateID" Type="int" />
+  </EntityType>
+  <Association Name="Account_AccountCompany">
+    <End Role="Companies" Type="TMDModel.Store.Companies" Multiplicity="0..1" />
+    <End Role="Accounts" Type="TMDModel.Store.Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="AccountCompany_CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Account_AccountPackage">
+    <End Role="Packages" Type="TMDModel.Store.Packages" Multiplicity="0..1" />
+    <End Role="Accounts" Type="TMDModel.Store.Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Packages">
+        <PropertyRef Name="PackageID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="AccountPackage_PackageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Account_AccountRecruiters">
+    <End Role="Accounts" Type="TMDModel.Store.Accounts" Multiplicity="0..1" />
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Recruiters">
+        <PropertyRef Name="Account_AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_BusinessTypeExperiences">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="BusinessTypes" Type="TMDModel.Store.BusinessTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="BusinessTypes">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_ContractTypes">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="ContractTypes" Type="TMDModel.Store.ContractTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="ContractTypes">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_Countries">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="Countries" Type="TMDModel.Store.Countries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="Countries">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_CurrentDayRate">
+    <End Role="DayRates" Type="TMDModel.Store.DayRates" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DayRates">
+        <PropertyRef Name="DayRateID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="CurrentDayRate_DayRateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_CurrentSalary">
+    <End Role="Salaries" Type="TMDModel.Store.Salaries" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salaries">
+        <PropertyRef Name="SalaryID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="CurrentSalary_SalaryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_DigitalSpecialisms">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="DigitalSpecialisms" Type="TMDModel.Store.DigitalSpecialisms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="DigitalSpecialisms">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_EligibilityToWorkIn">
+    <End Role="Eligibilities" Type="TMDModel.Store.Eligibilities" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eligibilities">
+        <PropertyRef Name="EligibilityID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="EligibilityToWorkIn_EligibilityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_Employments">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="PersonEmployments" Type="TMDModel.Store.PersonEmployments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="PersonEmployments">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_JobTypes">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="JobTypes" Type="TMDModel.Store.JobTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="JobTypes">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_Languages">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="Languages" Type="TMDModel.Store.Languages" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="Languages">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_LocationsSought">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="Locations" Type="TMDModel.Store.Locations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="Locations">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_MarketingSpecialisms">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="MarketingSpecialisms" Type="TMDModel.Store.MarketingSpecialisms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="MarketingSpecialisms">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_Person">
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_SectorExperiences">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="Sectors" Type="TMDModel.Store.Sectors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="Sectors">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_TechnologyCategoryExperiences">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="TechnologyCategories" Type="TMDModel.Store.TechnologyCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="TechnologyCategories">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Candidate_WillingToRelocate">
+    <End Role="ReLocates" Type="TMDModel.Store.ReLocates" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReLocates">
+        <PropertyRef Name="ReLocateID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="WillingToRelocate_ReLocateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Company_CompanyAddress">
+    <End Role="Addresses" Type="TMDModel.Store.Addresses" Multiplicity="0..1" />
+    <End Role="Companies" Type="TMDModel.Store.Companies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="Companies">
+        <PropertyRef Name="CompanyAddress_AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DayRate_DayRateCurrency">
+    <End Role="Currencies" Type="TMDModel.Store.Currencies" Multiplicity="0..1" />
+    <End Role="DayRates" Type="TMDModel.Store.DayRates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="DayRates">
+        <PropertyRef Name="DayRateCurrency_CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FreeTrialPeriod_FreeTrialPeriodRecruiter">
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="0..1" />
+    <End Role="FreeTrialPeriods" Type="TMDModel.Store.FreeTrialPeriods" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiters">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="FreeTrialPeriods">
+        <PropertyRef Name="FreeTrialPeriodRecruiter_RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Person_PersonAddress">
+    <End Role="Addresses" Type="TMDModel.Store.Addresses" Multiplicity="0..1" />
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="PersonAddress_AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Person_PersonTypes">
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="PersonTypes" Type="TMDModel.Store.PersonTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="PersonTypes">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Person_RoleTypes">
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="Roles" Type="TMDModel.Store.Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Roles">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonEmployment_Company">
+    <End Role="Companies" Type="TMDModel.Store.Companies" Multiplicity="0..1" />
+    <End Role="PersonEmployments" Type="TMDModel.Store.PersonEmployments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="PersonEmployments">
+        <PropertyRef Name="Company_CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonEmployment_JobTitle">
+    <End Role="JobTitles" Type="TMDModel.Store.JobTitles" Multiplicity="0..1" />
+    <End Role="PersonEmployments" Type="TMDModel.Store.PersonEmployments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobTitles">
+        <PropertyRef Name="JobTitleID" />
+      </Principal>
+      <Dependent Role="PersonEmployments">
+        <PropertyRef Name="JobTitle_JobTitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Recruiter_Employments">
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="0..1" />
+    <End Role="PersonEmployments" Type="TMDModel.Store.PersonEmployments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiters">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="PersonEmployments">
+        <PropertyRef Name="Recruiter_RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Recruiter_Person">
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Recruiters">
+        <PropertyRef Name="Person_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Recruiter_Subscription">
+    <End Role="Subscriptions" Type="TMDModel.Store.Subscriptions" Multiplicity="0..1" />
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscriptions">
+        <PropertyRef Name="SubscriptionID" />
+      </Principal>
+      <Dependent Role="Recruiters">
+        <PropertyRef Name="Subscription_SubscriptionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterCandidate_RecruiterCandidateAssignedTo">
+    <End Role="Persons" Type="TMDModel.Store.Persons" Multiplicity="0..1" />
+    <End Role="RecruiterCandidates" Type="TMDModel.Store.RecruiterCandidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="RecruiterCandidates">
+        <PropertyRef Name="RecruiterCandidateAssignedTo_PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterCandidateHistory_RecruiterCandidateHistoryItems">
+    <End Role="RecruiterCandidateHistory" Type="TMDModel.Store.RecruiterCandidateHistory" Multiplicity="0..1" />
+    <End Role="RecruiterCandidateHistoryItems" Type="TMDModel.Store.RecruiterCandidateHistoryItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecruiterCandidateHistory">
+        <PropertyRef Name="RecruiterCandidateHistoryID" />
+      </Principal>
+      <Dependent Role="RecruiterCandidateHistoryItems">
+        <PropertyRef Name="RecruiterCandidateHistory_RecruiterCandidateHistoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterCandidateHistoryItem_CandidateID">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="RecruiterCandidateHistoryItems" Type="TMDModel.Store.RecruiterCandidateHistoryItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="RecruiterCandidateHistoryItems">
+        <PropertyRef Name="CandidateID_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterCandidateHistoryItem_RecruiterID">
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="0..1" />
+    <End Role="RecruiterCandidateHistoryItems" Type="TMDModel.Store.RecruiterCandidateHistoryItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiters">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="RecruiterCandidateHistoryItems">
+        <PropertyRef Name="RecruiterID_RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterShortlist_Candidates">
+    <End Role="RecruiterShortlists" Type="TMDModel.Store.RecruiterShortlists" Multiplicity="0..1" />
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecruiterShortlists">
+        <PropertyRef Name="RecruiterShortlistID" />
+      </Principal>
+      <Dependent Role="Candidates">
+        <PropertyRef Name="RecruiterShortlist_RecruiterShortlistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterShortlist_Recruiter">
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="0..1" />
+    <End Role="RecruiterShortlists" Type="TMDModel.Store.RecruiterShortlists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiters">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="RecruiterShortlists">
+        <PropertyRef Name="Recruiter_RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Request_RecruiterShortlist">
+    <End Role="RecruiterShortlists" Type="TMDModel.Store.RecruiterShortlists" Multiplicity="0..1" />
+    <End Role="Requests" Type="TMDModel.Store.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecruiterShortlists">
+        <PropertyRef Name="RecruiterShortlistID" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="RecruiterShortlist_RecruiterShortlistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Request_RequestType">
+    <End Role="RequestTypes" Type="TMDModel.Store.RequestTypes" Multiplicity="0..1" />
+    <End Role="Requests" Type="TMDModel.Store.Requests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RequestTypes">
+        <PropertyRef Name="RequestTypeID" />
+      </Principal>
+      <Dependent Role="Requests">
+        <PropertyRef Name="RequestType_RequestTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteActivity_Candidate">
+    <End Role="Candidates" Type="TMDModel.Store.Candidates" Multiplicity="0..1" />
+    <End Role="SiteActivities" Type="TMDModel.Store.SiteActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Candidates">
+        <PropertyRef Name="CandidateID" />
+      </Principal>
+      <Dependent Role="SiteActivities">
+        <PropertyRef Name="Candidate_CandidateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteActivity_Recruiter">
+    <End Role="Recruiters" Type="TMDModel.Store.Recruiters" Multiplicity="0..1" />
+    <End Role="SiteActivities" Type="TMDModel.Store.SiteActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiters">
+        <PropertyRef Name="RecruiterID" />
+      </Principal>
+      <Dependent Role="SiteActivities">
+        <PropertyRef Name="Recruiter_RecruiterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SiteActivity_SiteActivities">
+    <End Role="SiteActivities" Type="TMDModel.Store.SiteActivities" Multiplicity="0..1" />
+    <End Role="SiteActivityTypes" Type="TMDModel.Store.SiteActivityTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SiteActivities">
+        <PropertyRef Name="SiteActivityID" />
+      </Principal>
+      <Dependent Role="SiteActivityTypes">
+        <PropertyRef Name="SiteActivity_SiteActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubscriptionType_SubscriptionTypeItems">
+    <End Role="SubscriptionTypes" Type="TMDModel.Store.SubscriptionTypes" Multiplicity="0..1" />
+    <End Role="SubscriptionTypeItems" Type="TMDModel.Store.SubscriptionTypeItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscriptionTypes">
+        <PropertyRef Name="SubscriptionTypeID" />
+      </Principal>
+      <Dependent Role="SubscriptionTypeItems">
+        <PropertyRef Name="SubscriptionType_SubscriptionTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

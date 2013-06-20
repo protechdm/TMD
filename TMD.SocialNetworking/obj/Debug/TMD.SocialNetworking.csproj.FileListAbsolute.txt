@@ -1,0 +1,12 @@
+J:\TMD\TMD.SocialNetworking\bin\Debug\TMD.SocialNetworking.dll
+J:\TMD\TMD.SocialNetworking\bin\Debug\TMD.SocialNetworking.pdb
+J:\TMD\TMD.SocialNetworking\bin\Debug\Facebook.dll
+J:\TMD\TMD.SocialNetworking\bin\Debug\Hammock.ClientProfile.dll
+J:\TMD\TMD.SocialNetworking\bin\Debug\TweetSharp.dll
+J:\TMD\TMD.SocialNetworking\bin\Debug\Newtonsoft.Json.dll
+J:\TMD\TMD.SocialNetworking\bin\Debug\Facebook.xml
+J:\TMD\TMD.SocialNetworking\bin\Debug\TweetSharp.pdb
+J:\TMD\TMD.SocialNetworking\bin\Debug\Newtonsoft.Json.xml
+J:\TMD\TMD.SocialNetworking\obj\Debug\ResolveAssemblyReference.cache
+J:\TMD\TMD.SocialNetworking\obj\Debug\TMD.SocialNetworking.dll
+J:\TMD\TMD.SocialNetworking\obj\Debug\TMD.SocialNetworking.pdb

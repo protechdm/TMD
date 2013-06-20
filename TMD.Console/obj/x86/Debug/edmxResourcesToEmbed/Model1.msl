@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TMDModelStoreContainer" CdmEntityContainer="TMDEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="TMDModel.Accounts">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+          <ScalarProperty Name="AccountStartDate" ColumnName="AccountStartDate" />
+          <ScalarProperty Name="AccountRenewalDate" ColumnName="AccountRenewalDate" />
+          <ScalarProperty Name="AccountIntroductionsLimit" ColumnName="AccountIntroductionsLimit" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="AccountCompany_CompanyID" ColumnName="AccountCompany_CompanyID" />
+          <ScalarProperty Name="AccountPackage_PackageID" ColumnName="AccountPackage_PackageID" />
+          <ScalarProperty Name="AccountWorkflowStatus_WorkflowStatusID" ColumnName="AccountWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="AccountDataStatus_DataStatusID" ColumnName="AccountDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="TMDModel.Addresses">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="AddressWorkflowStatus_WorkflowStatusID" ColumnName="AddressWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="AddressDataStatus_DataStatusID" ColumnName="AddressDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessTypes">
+      <EntityTypeMapping TypeName="TMDModel.BusinessTypes">
+        <MappingFragment StoreEntitySet="BusinessTypes">
+          <ScalarProperty Name="BusinessTypeID" ColumnName="BusinessTypeID" />
+          <ScalarProperty Name="BusinessTypeName" ColumnName="BusinessTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="BusinessTypeWorkflowStatus_WorkflowStatusID" ColumnName="BusinessTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="BusinessTypeDataStatus_DataStatusID" ColumnName="BusinessTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Candidates">
+      <EntityTypeMapping TypeName="TMDModel.Candidates">
+        <MappingFragment StoreEntitySet="Candidates">
+          <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+          <ScalarProperty Name="CandidateSummary" ColumnName="CandidateSummary" />
+          <ScalarProperty Name="CandidateReference" ColumnName="CandidateReference" />
+          <ScalarProperty Name="CandidateScoring" ColumnName="CandidateScoring" />
+          <ScalarProperty Name="CurrentDayRate" ColumnName="CurrentDayRate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Person_PersonID" ColumnName="Person_PersonID" />
+          <ScalarProperty Name="CurrentSalary_SalaryID" ColumnName="CurrentSalary_SalaryID" />
+          <ScalarProperty Name="WillingToRelocate_ReLocateID" ColumnName="WillingToRelocate_ReLocateID" />
+          <ScalarProperty Name="EligibilityToWorkIn_EligibilityID" ColumnName="EligibilityToWorkIn_EligibilityID" />
+          <ScalarProperty Name="CandidateWorkflowStatus_WorkflowStatusID" ColumnName="CandidateWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CandidateDataStatus_DataStatusID" ColumnName="CandidateDataStatus_DataStatusID" />
+          <ScalarProperty Name="RecruiterShortlist_RecruiterShortlistID" ColumnName="RecruiterShortlist_RecruiterShortlistID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="TMDModel.Companies">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CompanyEMail" ColumnName="CompanyEMail" />
+          <ScalarProperty Name="CompanyTelephone" ColumnName="CompanyTelephone" />
+          <ScalarProperty Name="LastLoggedIn" ColumnName="LastLoggedIn" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CompanyAddress_AddressID" ColumnName="CompanyAddress_AddressID" />
+          <ScalarProperty Name="CompanyWorkflowStatus_WorkflowStatusID" ColumnName="CompanyWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CompanyDataStatus_DataStatusID" ColumnName="CompanyDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractTypes">
+      <EntityTypeMapping TypeName="TMDModel.ContractTypes">
+        <MappingFragment StoreEntitySet="ContractTypes">
+          <ScalarProperty Name="ContractTypeID" ColumnName="ContractTypeID" />
+          <ScalarProperty Name="ContractTypeName" ColumnName="ContractTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="ContractTypeWorkflowStatus_WorkflowStatusID" ColumnName="ContractTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="ContractTypeDataStatus_DataStatusID" ColumnName="ContractTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="TMDModel.Countries">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CountryWorkflowStatus_WorkflowStatusID" ColumnName="CountryWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CountryDataStatus_DataStatusID" ColumnName="CountryDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Currencies">
+      <EntityTypeMapping TypeName="TMDModel.Currencies">
+        <MappingFragment StoreEntitySet="Currencies">
+          <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+          <ScalarProperty Name="CurrencyShortName" ColumnName="CurrencyShortName" />
+          <ScalarProperty Name="CurrencyName" ColumnName="CurrencyName" />
+          <ScalarProperty Name="CurrencySymbol" ColumnName="CurrencySymbol" />
+          <ScalarProperty Name="ExchangeRateSterling" ColumnName="ExchangeRateSterling" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CurrencyWorkflowStatus_WorkflowStatusID" ColumnName="CurrencyWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CurrencyDataStatus_DataStatusID" ColumnName="CurrencyDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DayRates">
+      <EntityTypeMapping TypeName="TMDModel.DayRates">
+        <MappingFragment StoreEntitySet="DayRates">
+          <ScalarProperty Name="DayRateID" ColumnName="DayRateID" />
+          <ScalarProperty Name="DayRateName" ColumnName="DayRateName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="DayRateCurrency_CurrencyID" ColumnName="DayRateCurrency_CurrencyID" />
+          <ScalarProperty Name="DayRateWorkflowStatus_WorkflowStatusID" ColumnName="DayRateWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CurrencyDataStatus_DataStatusID" ColumnName="CurrencyDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DigitalSpecialisms">
+      <EntityTypeMapping TypeName="TMDModel.DigitalSpecialisms">
+        <MappingFragment StoreEntitySet="DigitalSpecialisms">
+          <ScalarProperty Name="DigitalSpecialismID" ColumnName="DigitalSpecialismID" />
+          <ScalarProperty Name="DigitalSpecialismName" ColumnName="DigitalSpecialismName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="DigitalSpecialismWorkflowStatus_WorkflowStatusID" ColumnName="DigitalSpecialismWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="DigitalSpecialismDataStatus_DataStatusID" ColumnName="DigitalSpecialismDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eligibilities">
+      <EntityTypeMapping TypeName="TMDModel.Eligibilities">
+        <MappingFragment StoreEntitySet="Eligibilities">
+          <ScalarProperty Name="EligibilityID" ColumnName="EligibilityID" />
+          <ScalarProperty Name="EligibilityName" ColumnName="EligibilityName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="EligibilityWorkflowStatus_WorkflowStatusID" ColumnName="EligibilityWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="EligibilityDataStatus_DataStatusID" ColumnName="EligibilityDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FreeTrialPeriods">
+      <EntityTypeMapping TypeName="TMDModel.FreeTrialPeriods">
+        <MappingFragment StoreEntitySet="FreeTrialPeriods">
+          <ScalarProperty Name="FreeTrialPeriodID" ColumnName="FreeTrialPeriodID" />
+          <ScalarProperty Name="FreeTrialPeriodName" ColumnName="FreeTrialPeriodName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="FreeTrialPeriodWorkflowStatus_WorkflowStatusID" ColumnName="FreeTrialPeriodWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="FreeTrialPeriodDataStatus_DataStatusID" ColumnName="FreeTrialPeriodDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTitles">
+      <EntityTypeMapping TypeName="TMDModel.JobTitles">
+        <MappingFragment StoreEntitySet="JobTitles">
+          <ScalarProperty Name="JobTitleID" ColumnName="JobTitleID" />
+          <ScalarProperty Name="JobTitleName" ColumnName="JobTitleName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="JobTitleWorkflowStatus_WorkflowStatusID" ColumnName="JobTitleWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="JobTitleDataStatus_DataStatusID" ColumnName="JobTitleDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobTypes">
+      <EntityTypeMapping TypeName="TMDModel.JobTypes">
+        <MappingFragment StoreEntitySet="JobTypes">
+          <ScalarProperty Name="JobTypeID" ColumnName="JobTypeID" />
+          <ScalarProperty Name="JobTypeName" ColumnName="JobTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="JobTypeWorkflowStatus_WorkflowStatusID" ColumnName="JobTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="JobTypeDataStatus_DataStatusID" ColumnName="JobTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="TMDModel.Languages">
+        <MappingFragment StoreEntitySet="Languages">
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LanguageWorkflowStatus_WorkflowStatusID" ColumnName="LanguageWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="LanguageDataStatus_DataStatusID" ColumnName="LanguageDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="TMDModel.Locations">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LocationWorkflowStatus_WorkflowStatusID" ColumnName="LocationWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="LocationDataStatus_DataStatusID" ColumnName="LocationDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarketingSpecialisms">
+      <EntityTypeMapping TypeName="TMDModel.MarketingSpecialisms">
+        <MappingFragment StoreEntitySet="MarketingSpecialisms">
+          <ScalarProperty Name="MarketingSpecialismID" ColumnName="MarketingSpecialismID" />
+          <ScalarProperty Name="MarketingSpecialismName" ColumnName="MarketingSpecialismName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="MarketingSpecialismWorkflowStatus_WorkflowStatusID" ColumnName="MarketingSpecialismWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="MarketingSpecialismDataStatus_DataStatusID" ColumnName="MarketingSpecialismDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Packages">
+      <EntityTypeMapping TypeName="TMDModel.Packages">
+        <MappingFragment StoreEntitySet="Packages">
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="PackageWorkflowStatus_WorkflowStatusID" ColumnName="PackageWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="PackageDataStatus_DataStatusID" ColumnName="PackageDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonEmployments">
+      <EntityTypeMapping TypeName="TMDModel.PersonEmployments">
+        <MappingFragment StoreEntitySet="PersonEmployments">
+          <ScalarProperty Name="PersonEmploymentID" ColumnName="PersonEmploymentID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="IsCurrent" ColumnName="IsCurrent" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Company_CompanyID" ColumnName="Company_CompanyID" />
+          <ScalarProperty Name="JobTitle_JobTitleID" ColumnName="JobTitle_JobTitleID" />
+          <ScalarProperty Name="PersonEmploymentWorkflowStatus_WorkflowStatusID" ColumnName="PersonEmploymentWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="PersonEmploymentDataStatus_DataStatusID" ColumnName="PersonEmploymentDataStatus_DataStatusID" />
+          <ScalarProperty Name="Recruiter_RecruiterID" ColumnName="Recruiter_RecruiterID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="TMDModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="Forename" ColumnName="Forename" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PersonAddress1" ColumnName="PersonAddress1" />
+          <ScalarProperty Name="PersonAddress2" ColumnName="PersonAddress2" />
+          <ScalarProperty Name="PersonRegion" ColumnName="PersonRegion" />
+          <ScalarProperty Name="PersonCountry" ColumnName="PersonCountry" />
+          <ScalarProperty Name="PersonPostCode" ColumnName="PersonPostCode" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="LastLoggedIn" ColumnName="LastLoggedIn" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="PersonWorkflowStatus_WorkflowStatusID" ColumnName="PersonWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="PersonDataStatus_DataStatusID" ColumnName="PersonDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonTypes">
+      <EntityTypeMapping TypeName="TMDModel.PersonTypes">
+        <MappingFragment StoreEntitySet="PersonTypes">
+          <ScalarProperty Name="PersonTypeID" ColumnName="PersonTypeID" />
+          <ScalarProperty Name="PersonTypeName" ColumnName="PersonTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="PersonTypeWorkflowStatus_WorkflowStatusID" ColumnName="PersonTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="PersonTypeDataStatus_DataStatusID" ColumnName="PersonTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="Person_PersonID" ColumnName="Person_PersonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecruiterCandidates">
+      <EntityTypeMapping TypeName="TMDModel.RecruiterCandidates">
+        <MappingFragment StoreEntitySet="RecruiterCandidates">
+          <ScalarProperty Name="RecruiterCandidateID" ColumnName="RecruiterCandidateID" />
+          <ScalarProperty Name="RecruiterID" ColumnName="RecruiterID" />
+          <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+          <ScalarProperty Name="RecruiterCandidateDate" ColumnName="RecruiterCandidateDate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="RecruiterCandidateWorkflowStatus_WorkflowStatusID" ColumnName="RecruiterCandidateWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RecruiterCandidateAssignedTo_PersonID" ColumnName="RecruiterCandidateAssignedTo_PersonID" />
+          <ScalarProperty Name="RecruiterCandidateDataStatus_DataStatusID" ColumnName="RecruiterCandidateDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recruiters">
+      <EntityTypeMapping TypeName="TMDModel.Recruiters">
+        <MappingFragment StoreEntitySet="Recruiters">
+          <ScalarProperty Name="RecruiterID" ColumnName="RecruiterID" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Person_PersonID" ColumnName="Person_PersonID" />
+          <ScalarProperty Name="Subscription_SubscriptionID" ColumnName="Subscription_SubscriptionID" />
+          <ScalarProperty Name="RecruiterWorkflowStatus_WorkflowStatusID" ColumnName="RecruiterWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RecruiterDataStatus_DataStatusID" ColumnName="RecruiterDataStatus_DataStatusID" />
+          <ScalarProperty Name="Account_AccountID" ColumnName="Account_AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecruiterShortlists">
+      <EntityTypeMapping TypeName="TMDModel.RecruiterShortlists">
+        <MappingFragment StoreEntitySet="RecruiterShortlists">
+          <ScalarProperty Name="RecruiterShortlistID" ColumnName="RecruiterShortlistID" />
+          <ScalarProperty Name="RecruiterShortlistName" ColumnName="RecruiterShortlistName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Recruiter_RecruiterID" ColumnName="Recruiter_RecruiterID" />
+          <ScalarProperty Name="RecruiterShortlistWorkflowStatus_WorkflowStatusID" ColumnName="RecruiterShortlistWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RecruiterShortlistDataStatus_DataStatusID" ColumnName="RecruiterShortlistDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReLocates">
+      <EntityTypeMapping TypeName="TMDModel.ReLocates">
+        <MappingFragment StoreEntitySet="ReLocates">
+          <ScalarProperty Name="ReLocateID" ColumnName="ReLocateID" />
+          <ScalarProperty Name="ReLocateName" ColumnName="ReLocateName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="ReLocateWorkflowStatus_WorkflowStatusID" ColumnName="ReLocateWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="ReLocateDataStatus_DataStatusID" ColumnName="ReLocateDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestTypes">
+      <EntityTypeMapping TypeName="TMDModel.RequestTypes">
+        <MappingFragment StoreEntitySet="RequestTypes">
+          <ScalarProperty Name="RequestTypeID" ColumnName="RequestTypeID" />
+          <ScalarProperty Name="RequestTypeName" ColumnName="RequestTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="RequestTypeWorkflowStatus_WorkflowStatusID" ColumnName="RequestTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RequestTypeDataStatus_DataStatusID" ColumnName="RequestTypeDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="TMDModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="RoleWorkflowStatus_WorkflowStatusID" ColumnName="RoleWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RoleDataStatus_DataStatusID" ColumnName="RoleDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="TMDModel.Salaries">
+        <MappingFragment StoreEntitySet="Salaries">
+          <ScalarProperty Name="SalaryID" ColumnName="SalaryID" />
+          <ScalarProperty Name="SalaryName" ColumnName="SalaryName" />
+          <ScalarProperty Name="SalaryFrom" ColumnName="SalaryFrom" />
+          <ScalarProperty Name="SalaryTo" ColumnName="SalaryTo" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SalaryWorkflowStatus_WorkflowStatusID" ColumnName="SalaryWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SalaryDataStatus_DataStatusID" ColumnName="SalaryDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectors">
+      <EntityTypeMapping TypeName="TMDModel.Sectors">
+        <MappingFragment StoreEntitySet="Sectors">
+          <ScalarProperty Name="SectorID" ColumnName="SectorID" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SectorWorkflowStatus_WorkflowStatusID" ColumnName="SectorWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SectorDataStatus_DataStatusID" ColumnName="SectorDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteActivities">
+      <EntityTypeMapping TypeName="TMDModel.SiteActivities">
+        <MappingFragment StoreEntitySet="SiteActivities">
+          <ScalarProperty Name="SiteActivityID" ColumnName="SiteActivityID" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+          <ScalarProperty Name="Recruiter_RecruiterID" ColumnName="Recruiter_RecruiterID" />
+          <ScalarProperty Name="SiteActivityWorkflowStatus_WorkflowStatusID" ColumnName="SiteActivityWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SiteActivityDataStatus_DataStatusID" ColumnName="SiteActivityDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteActivityTypes">
+      <EntityTypeMapping TypeName="TMDModel.SiteActivityTypes">
+        <MappingFragment StoreEntitySet="SiteActivityTypes">
+          <ScalarProperty Name="SiteActivityTypeID" ColumnName="SiteActivityTypeID" />
+          <ScalarProperty Name="SiteActivityTypeName" ColumnName="SiteActivityTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SiteActivityTypeWorkflowStatus_WorkflowStatusID" ColumnName="SiteActivityTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SiteActivityTypeDataStatus_DataStatusID" ColumnName="SiteActivityTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="SiteActivity_SiteActivityID" ColumnName="SiteActivity_SiteActivityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="TMDModel.Subscriptions">
+        <MappingFragment StoreEntitySet="Subscriptions">
+          <ScalarProperty Name="SubscriptionID" ColumnName="SubscriptionID" />
+          <ScalarProperty Name="SubscriptionCostPerUserOffered" ColumnName="SubscriptionCostPerUserOffered" />
+          <ScalarProperty Name="SubscriptionCostPerMultiUserOffered" ColumnName="SubscriptionCostPerMultiUserOffered" />
+          <ScalarProperty Name="SubscriptionCostPerUser" ColumnName="SubscriptionCostPerUser" />
+          <ScalarProperty Name="SubscriptionCostPerMultiUser" ColumnName="SubscriptionCostPerMultiUser" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SubscriptionWorkflowStatus_WorkflowStatusID" ColumnName="SubscriptionWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SubscriptionDataStatus_DataStatusID" ColumnName="SubscriptionDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionTypeItems">
+      <EntityTypeMapping TypeName="TMDModel.SubscriptionTypeItems">
+        <MappingFragment StoreEntitySet="SubscriptionTypeItems">
+          <ScalarProperty Name="SubscriptionTypeItemID" ColumnName="SubscriptionTypeItemID" />
+          <ScalarProperty Name="SubscriptionTypeItemName" ColumnName="SubscriptionTypeItemName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SubscriptionTypeItemWorkflowStatus_WorkflowStatusID" ColumnName="SubscriptionTypeItemWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SubscriptionTypeItemDataStatus_DataStatusID" ColumnName="SubscriptionTypeItemDataStatus_DataStatusID" />
+          <ScalarProperty Name="SubscriptionType_SubscriptionTypeID" ColumnName="SubscriptionType_SubscriptionTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionTypes">
+      <EntityTypeMapping TypeName="TMDModel.SubscriptionTypes">
+        <MappingFragment StoreEntitySet="SubscriptionTypes">
+          <ScalarProperty Name="SubscriptionTypeID" ColumnName="SubscriptionTypeID" />
+          <ScalarProperty Name="SubscriptionTypeName" ColumnName="SubscriptionTypeName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="SubscriptionTypeWorkflowStatus_WorkflowStatusID" ColumnName="SubscriptionTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="SubscriptionTypeDataStatus_DataStatusID" ColumnName="SubscriptionTypeDataStatus_DataStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TechnologyCategories">
+      <EntityTypeMapping TypeName="TMDModel.TechnologyCategories">
+        <MappingFragment StoreEntitySet="TechnologyCategories">
+          <ScalarProperty Name="TechnologyCategoryID" ColumnName="TechnologyCategoryID" />
+          <ScalarProperty Name="TechnologyCategoryName" ColumnName="TechnologyCategoryName" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="TechnologyCategoryWorkflowStatus_WorkflowStatusID" ColumnName="TechnologyCategoryWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="TechnologyCategoryDataStatus_DataStatusID" ColumnName="TechnologyCategoryDataStatus_DataStatusID" />
+          <ScalarProperty Name="Candidate_CandidateID" ColumnName="Candidate_CandidateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="TMDModel.Request">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="RequestTypeDataStatus_DataStatusID" ColumnName="RequestTypeDataStatus_DataStatusID" />
+          <ScalarProperty Name="RequestTypeWorkflowStatus_WorkflowStatusID" ColumnName="RequestTypeWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RecruiterShortlist_RecruiterShortlistID" ColumnName="RecruiterShortlist_RecruiterShortlistID" />
+          <ScalarProperty Name="RequestType_RequestTypeID" ColumnName="RequestType_RequestTypeID" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="RequestName" ColumnName="RequestName" />
+          <ScalarProperty Name="RequestID" ColumnName="RequestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecruiterCandidateHistories1">
+      <EntityTypeMapping TypeName="TMDModel.RecruiterCandidateHistory">
+        <MappingFragment StoreEntitySet="RecruiterCandidateHistory">
+          <ScalarProperty Name="RecruiterCandidateHistoriesDataStatus_DataStatusID" ColumnName="RecruiterCandidateHistoriesDataStatus_DataStatusID" />
+          <ScalarProperty Name="RecruiterCandidateHistoriesWorkflowStatus_WorkflowStatusID" ColumnName="RecruiterCandidateHistoriesWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="RecruiterCandidateHistoryID" ColumnName="RecruiterCandidateHistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecruiterCandidateHistoryItems">
+      <EntityTypeMapping TypeName="TMDModel.RecruiterCandidateHistoryItem">
+        <MappingFragment StoreEntitySet="RecruiterCandidateHistoryItems">
+          <ScalarProperty Name="RecruiterCandidateHistory_RecruiterCandidateHistoryID" ColumnName="RecruiterCandidateHistory_RecruiterCandidateHistoryID" />
+          <ScalarProperty Name="RecruiterCandidateHistoryItemDataStatus_DataStatusID" ColumnName="RecruiterCandidateHistoryItemDataStatus_DataStatusID" />
+          <ScalarProperty Name="RecruiterCandidateHistoryItemWorkflowStatus_WorkflowStatusID" ColumnName="RecruiterCandidateHistoryItemWorkflowStatus_WorkflowStatusID" />
+          <ScalarProperty Name="CandidateID_CandidateID" ColumnName="CandidateID_CandidateID" />
+          <ScalarProperty Name="RecruiterID_RecruiterID" ColumnName="RecruiterID_RecruiterID" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="RecruiterCandidateHistoryItemDate" ColumnName="RecruiterCandidateHistoryItemDate" />
+          <ScalarProperty Name="RecruiterCandidateHistoryItemID" ColumnName="RecruiterCandidateHistoryItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
