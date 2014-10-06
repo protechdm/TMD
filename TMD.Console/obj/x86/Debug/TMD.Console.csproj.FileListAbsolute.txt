@@ -21,3 +21,6 @@ J:\TMD\TMD.Console\bin\Debug\TMD.SocialNetworking.pdb
 J:\TMD\TMD.Console\bin\Debug\Facebook.xml
 J:\TMD\TMD.Console\bin\Debug\TweetSharp.pdb
 J:\TMD\TMD.Console\bin\Debug\Newtonsoft.Json.xml
+C:\Development\TMD\TMD.Console\bin\Debug\TMD.Console.exe.config
+C:\Development\TMD\TMD.Console\obj\x86\Debug\TMD.Console.exe
+C:\Development\TMD\TMD.Console\obj\x86\Debug\TMD.Console.pdb
